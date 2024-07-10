@@ -1,0 +1,80 @@
+.body {
+  padding-top: 80px;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 5%;
+  padding-bottom: 0px;
+  margin-bottom: 50px;
+  font-family: 'Space Grotesk';
+  /* Add margin-bottom to avoid gap under footer */
+}
+
+.law {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FCF7FF;
+  background: #2823FF;
+}
+
+
+
+.law-icon {
+  width: 30%; /* Adjust width to match the height */
+  padding-top: 30%; /* Create a square container with height 30% */
+  border-radius: 50%;
+  background-color: #FCF7FF;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.law-icon img {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.read-more-button {
+  margin-top: 20px;
+  background-color: #FCF7FF;
+  color: black;
+  border: 2px solid #2823FF;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline from links */
+  transition: opacity 0.15s, background-color 0.15s, color 0.15s, box-shadow 0.15s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a small box shadow */
+}
+
+.read-more-button:hover {
+  opacity: 0.7;
+}
+
+.read-more-button:active {
+  background-color: #2823FF;
+  color: #FCF7FF;
+  border: 2px solid #FCF7FF;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .legal-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

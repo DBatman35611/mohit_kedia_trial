@@ -1,0 +1,217 @@
+body{
+  font-family: 'Space Grotesk';
+}
+
+.about-us-title {
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to right, #2722F0, #FCF7FF);
+  padding: 20px;
+  display: flex;
+  align-items: center; /* Center content vertically */
+}
+
+.about-us-title p {
+  font-weight: bold;
+  color: #FCF7FF;
+  margin: 0; /* Remove default margin */
+  font-family: 'Space Grotesk';
+}
+
+/* Styling for the about-us-para div */
+.about-us-para {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: auto;
+  margin-top: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+}
+
+.about-us-para:hover{
+  background: #f1f3ff;
+}
+
+.about-us-para p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Space Grotesk';
+  font-weight: 300;
+  
+}
+
+/* Styling for the about-us-history div */
+.about-us-history {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: auto;
+  margin-top: 0px; /* Add margin to avoid overlap */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-us-history:hover{
+  background: #f1f3ff;
+}
+
+.about-us-history h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; /* Center the text horizontally */
+  margin-bottom: 20px; /* Space between the title and paragraph */
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+}
+
+.about-us-history p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; /* Justify the text for better readability */
+  font-family: 'Space Grotesk';
+  font-weight: 300;
+}
+
+.about-mission {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: auto;
+  margin-top: 0px; /* Add margin to avoid overlap */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-mission:hover{
+  background: #f1f3ff;
+}
+
+
+.about-mission h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; /* Center the text horizontally */
+  margin-bottom: 20px; /* Space between the title and paragraph */
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+}
+
+/* Styling for the about-mission-sub div */
+.about-mission-sub {
+  display: flex;
+  justify-content: space-between; /* Space between the child divs */
+}
+
+.mission-para {
+  flex: 0.7; /* 70% width */
+  font-size: 16px;
+  line-height: 1.6;
+  padding-right: 20px; /* Add some space between text and image */
+}
+
+.mission-para p{
+  font-family: 'Space Grotesk';
+  font-weight: 300;
+}
+
+
+.mission-img {
+  flex: 0.3; /* 30% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.mission-img img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  margin-top: -100px;
+}
+
+.about-values {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: auto;
+  margin-top: 0px; /* Add margin to avoid overlap */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-values:hover{
+  background: #f1f3ff;
+}
+
+.about-values h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; /* Center the text horizontally */
+  margin-bottom: 20px; /* Space between the title and paragraph */
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+}
+
+/* Styling for the about-vision-pillars div */
+.about-vision-pillars {
+  gap: 20px; /* Add gap between the columns */
+  display: flex;
+  justify-content: space-between; /* Space between the child divs */
+}
+
+.pillar {
+  flex: 1; /* Evenly distribute space among the pillars */
+  height: auto;
+  display: flex;
+  flex-direction: column; /* Stack text and paragraph vertically */
+  justify-content: flex-start; /* Align items at the start */
+  align-items: center;
+  color: #2823FF;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px;
+  background-color: #2823FF; /* Set background color to blue */
+  border-radius: 5px;
+  padding-top: 20px; /* Remove padding from top */
+  margin-bottom: 60px;
+  font-family: 'Space Grotesk';
+}
+
+.pillar p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
+  text-align: center; /* Center the text horizontally */
+  margin-top: 10px; /* Adjust top margin */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.vision-title {
+  background: #FCF7FF;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  border-radius: 5px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: 'Space Grotesk';
+}
+
+/* Remove default margin for paragraphs inside pillar */
+.pillar p {
+  margin: 10px 0 0 0; /* Set top margin, remove bottom margin */
+  font-family: 'Space Grotesk';
+  font-weight: 300;
+  color: #FCF7FF;
+}
+
+@media (max-width: 768px) {
+  .about-vision-pillars {
+    gap: 20px; /* Add gap between the columns */
+    display: flex;
+    justify-content: space-between; /* Space between the child divs */
+    flex-direction: column; /* Stack text and paragraph vertically */
+    
+  }
+}

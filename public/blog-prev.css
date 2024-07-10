@@ -1,0 +1,112 @@
+.blog-title{
+  font-size: 24px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-family: 'Space Grotesk';
+  color: #1E1926;
+  
+}
+
+.blog-title p{
+  font-family: 'Space Grotesk';
+  color: #1E1926;
+}
+
+
+/* Styling for the blog-preview div */
+.blog-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 1:1:1 column ratio */
+  gap: 20px; /* Gap between columns */
+  padding: 20px; /* Padding inside the div */
+  padding-bottom: 20px;
+}
+
+/* Styling for blog items */
+.blog-item {
+  padding: 20px; /* Padding inside each blog item */
+  text-align: center; /* Center align text */
+  display: flex; /* Display as flex container */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  background-color: #f1f3ff; /* Blue background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Styling for images inside blog items */
+.blog-item img {
+  width: 100%; /* Image width 100% of parent */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Margin bottom for spacing */
+}
+
+/* Styling for blog item content (title and text) */
+.blog-item-content {
+  text-align: center; /* Center align text */
+  margin-top: auto; /* Push content to the top */
+}
+
+.blog-item-content h3 {
+  margin: 0; /* Remove default margins */
+  font-size: 1.5rem; /* Example font size for demonstration */
+  font-family: 'Space Grotesk';
+  color: #1E1926;
+}
+
+/* Links for blog titles */
+.blog-item-content h3 a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+  transition: color 0.15s; /* Smooth transition for color change */
+}
+
+.blog-item-content h3 a:hover {
+  color: #2823FF; /* Change color on hover */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.home-blog-btn {
+  width: 250px;
+  height: 50px;
+  background-color: #2823FF;
+  color: #FCF7FF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.15s, background-color 0.15s, border-color 0.15s;
+  margin-bottom: 10px;
+  font-family: 'Space Grotesk';
+  font-size: 15px;
+  
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-blog-btn:hover {
+  opacity: 0.7;
+}
+
+.home-blog-btn:active {
+  background-color: #FCF7FF;
+  border: 2px solid #2823FF;
+  color: #2823FF;
+}
+
+
+@media (max-width: 768px) {
+  .blog-preview{
+    grid-template-columns: 1fr;
+  }
+
+}

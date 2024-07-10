@@ -1,0 +1,75 @@
+.footer {
+  background: #2823FF;
+  color: #FCF7FF;
+  width: 100%;
+  display: flex;
+  padding: 20px 0; /* Padding for top and bottom */
+  position: relative; /* Added for positioning the divider */
+}
+
+.footer-contact {
+  flex: 1; /* Each div takes up equal space */
+  background: #2823FF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Padding around the content */
+}
+
+.footer-quick-links {
+  flex: 1; /* Each div takes up equal space */
+  background: #2823FF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Padding around the content */
+}
+
+/* Styling for footer titles */
+.footer-links-title, .footer-contact-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between title and content */
+  font-family: 'Space Grotesk';
+}
+
+/* Styling for footer links */
+.footer-links {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  
+}
+
+.footer-links a {
+  text-decoration: underline; /* Underline for links */
+  color: #FCF7FF;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: 'Space Grotesk';
+}
+
+/* Styling for footer contact info */
+.footer-contact-info {
+  font-size: 14px;
+  font-family: 'Space Grotesk';
+}
+
+/* Remove default margin from paragraphs in footer contact info */
+.footer-contact-info p {
+  margin: 0;
+  font-family: 'Space Grotesk';
+}
+
+/* Styling for the vertical divider */
+.divider {
+  position: absolute;
+  top: 20px; /* Adjust vertically to align with padding */
+  bottom: 20px; /* Adjust vertically to align with padding */
+  right: calc(50% - 1px); /* Adjust horizontally to center and calculate half the thickness */
+  width: 2px; /* Thickness of the divider */
+  background-color: #FCF7FF; /* Color of the divider */
+}

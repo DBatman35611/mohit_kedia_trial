@@ -1,0 +1,32 @@
+/* disclaimer.css */
+
+body {
+  
+  padding-top: 80px;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #f2f2f2; /* Optional background color */
+}
+
+.disclaimer-content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #FCF7FF;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.disclaimer-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.disclaimer-content li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+

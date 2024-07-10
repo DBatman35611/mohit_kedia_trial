@@ -1,0 +1,146 @@
+/* Styling for the service-title div */
+.service-title {
+  background-color: #2823FF; /* Blue background color */
+  color: #FCF7FF; /* White text color */
+  font-weight: bold; /* Bold font */
+  font-size: 24px; /* Large font size */
+  text-align: center; /* Center align text */
+  padding-top: 20px;
+  font-family: 'Space Grotesk';
+}
+
+/* Styling for the services-preview div */
+.services-preview {
+  background-color: #2823FF; /* Blue background color */
+  padding: 20px; /* Padding inside the div */
+  display: flex; /* Display as flex container */
+  justify-content: space-between; /* Space evenly between sliders */
+  overflow: hidden; /* Hide overflow to contain moving elements */
+  position: relative; /* Position relative for pseudo-elements */
+  font-family: 'Space Grotesk';
+}
+
+/* Pause the animation on hover */
+.services-preview:hover .service-slider {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+/* Styling for the service-slider div */
+.service-slider {
+  display: flex; /* Display as flex container */
+  animation: scroll 30s linear infinite; /* Animation for continuous movement */
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 100%; /* Full width of the container */
+  font-family: 'Space Grotesk';
+}
+
+/* Animation keyframes for scroll effect */
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* Styling for the service divs */
+.service {
+  width: 20%; /* Each service takes up 20% of the .service-slider width */
+  height: auto; /* Auto height to fit the image */
+  padding: 20px 10px 10px 10px; /* Padding inside the div with 20px top padding */
+  margin-right: 10px; /* Margin between divs */
+  display: flex; /* Added to make it a flex container */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  color: #FCF7FF; /* Text color */
+  font-weight: bold; /* Bold font */
+  font-family: 'Space Grotesk';
+  background-color: #2823FF; /* Blue background color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Individual div styling */
+.service-incometax-pre,
+.service-auditing-pre,
+.service-financial-pre,
+.service-investing-pre,
+.service-gst-pre {
+  background-color: #FCF7FF; /* White background color */
+  color: #1E1926; /* Text color */
+  font-family: 'Space Grotesk';
+  padding-bottom: 20px; /* Padding at the bottom */
+}
+
+/* Styling for the text and image divs inside service divs */
+.service-text {
+  color: #1E1926; /* Text color */
+  font-family: 'Space Grotesk';
+  margin-bottom: 5%;
+}
+
+.service-image {
+  width: 100%; /* Full width of the parent div */
+  display: flex; /* Flex container */
+  justify-content: center; /* Center horizontally */
+  padding-top: 20px; /* Padding at the top */
+  margin-bottom: 10%; /* Margin bottom 10% of the height of the parent div */
+}
+
+.service-image img {
+  width: 20%; /* Width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure block display */
+}
+
+/* Styling for the button */
+.service-button {
+  background-color: #2823FF; /* Blue background color */
+  color: #FCF7FF; /* Text color */
+  border: none; /* No border initially */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: opacity 0.15s, background-color 0.15s, border 0.15s; /* Smooth transition for hover and click effects */
+  padding: 5px 10px; /* Padding to adjust the button size */
+  text-decoration: none;
+  font-family: 'Space Grotesk';
+}
+
+.service-button:hover {
+  opacity: 0.7; /* Decrease opacity on hover */
+}
+
+.service-button:active {
+  background-color: #FCF7FF; /* White background on click */
+  border: 2px solid #2823FF; /* Blue border on click */
+  color: #2823FF; /* Blue text color on click */
+}
+
+/* Pseudo-elements for gradient effect */
+.services-preview::before,
+.services-preview::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 30px; /* Width of the gradient effect */
+  height: 100%; /* Full height of the parent div */
+  z-index: 1; /* Ensure it is above the scrolling content */
+}
+
+.services-preview::before {
+  left: 0; /* Position at the left end */
+  background: linear-gradient(to right, #2823FF, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
+}
+
+.services-preview::after {
+  right: 0; /* Position at the right end */
+  background: linear-gradient(to left, #2823FF, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
+}
+
+@media (max-width: 768px) {
+  .service-slider{
+    width: 400%;
+    
+  }
+}

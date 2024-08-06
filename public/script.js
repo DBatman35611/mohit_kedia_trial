@@ -32,7 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const flashDuration = 300; // Adjust as needed
 
             setTimeout(() => {
-              footerContact.style.backgroundColor = '#2823FF'; // Restore original color
+              footerContact.style.backgroundColor = '#1f3695'; // Restore original color
             }, flashDuration);
 
             // Remove event listener after flashing once
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 0);
 
     setTimeout(() => {
-      footerContact.style.backgroundColor = '#2823FF'; // Restore original color
+      footerContact.style.backgroundColor = '#1f3695'; // Restore original color
     }, flashDuration);
   });
 });

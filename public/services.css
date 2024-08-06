@@ -1,5 +1,6 @@
 body {
   font-family: 'Space Grotesk', sans-serif;
+  background-color: white;
 }
 
 
@@ -28,6 +29,7 @@ body {
   padding-bottom: 0px;
   margin-bottom: 20px;
   font-family: 'Space Grotesk';
+  background-color: white;
 /* Add margin-bottom to avoid gap under footer */
 }
 
@@ -42,11 +44,11 @@ body {
   justify-content: center;
   text-align: center;
   color: #FCF7FF;
-  background: #2823FF;
+  background: #1f3695;
 }
 
 .service:hover{
-  background-color: #9886ff;
+  background-color: #2823ff;
 }
 
 
@@ -75,6 +77,7 @@ body {
   align-items: center;
   margin: 20px 0;
   margin-bottom: 50px;
+  background-color: white;
 }
 
 .contact-button-img {
@@ -83,7 +86,7 @@ body {
 }
 
 .contact-button {
-  background-color: #2823FF;
+  background-color: #1f3695;
   color: #FCF7FF;
   border: none;
   padding: 10px 20px;
@@ -101,7 +104,7 @@ body {
 
 .contact-button:active {
   background-color: #FCF7FF;
-  color: #2823FF;
+  color: #1f3695;
 }
 
 @media (max-width: 768px) {

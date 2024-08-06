@@ -1,6 +1,6 @@
 /* Styling for the service-title div */
 .service-title {
-  background-color: #2823FF; /* Blue background color */
+  background-color: #1f3695; /* Blue background color */
   color: #FCF7FF; /* White text color */
   font-weight: bold; /* Bold font */
   font-size: 24px; /* Large font size */
@@ -11,7 +11,7 @@
 
 /* Styling for the services-preview div */
 .services-preview {
-  background-color: #2823FF; /* Blue background color */
+  background-color: #1f3695; /* Blue background color */
   padding: 20px; /* Padding inside the div */
   display: flex; /* Display as flex container */
   justify-content: space-between; /* Space evenly between sliders */
@@ -57,7 +57,7 @@
   color: #FCF7FF; /* Text color */
   font-weight: bold; /* Bold font */
   font-family: 'Space Grotesk';
-  background-color: #2823FF; /* Blue background color */
+  background-color: #1f3695; /* Blue background color */
   border-radius: 10px; /* Rounded corners */
 }
 
@@ -96,7 +96,7 @@
 
 /* Styling for the button */
 .service-button {
-  background-color: #2823FF; /* Blue background color */
+  background-color: #1f3695; /* Blue background color */
   color: #FCF7FF; /* Text color */
   border: none; /* No border initially */
   border-radius: 5px; /* Slightly rounded corners */
@@ -113,8 +113,8 @@
 
 .service-button:active {
   background-color: #FCF7FF; /* White background on click */
-  border: 2px solid #2823FF; /* Blue border on click */
-  color: #2823FF; /* Blue text color on click */
+  border: 2px solid #1f3695; /* Blue border on click */
+  color: #1f3695; /* Blue text color on click */
 }
 
 /* Pseudo-elements for gradient effect */
@@ -130,12 +130,12 @@
 
 .services-preview::before {
   left: 0; /* Position at the left end */
-  background: linear-gradient(to right, #2823FF, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
+  background: linear-gradient(to right, #1f3695, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
 }
 
 .services-preview::after {
   right: 0; /* Position at the right end */
-  background: linear-gradient(to left, #2823FF, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
+  background: linear-gradient(to left, #1f3695, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
 }
 
 @media (max-width: 768px) {

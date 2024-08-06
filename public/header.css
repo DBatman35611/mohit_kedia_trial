@@ -44,7 +44,7 @@ body {
 }
 
 .yellow {
-  background-color: #2823FF;
+  background-color: #1f3695;
   flex: 1;
   display: flex;
   align-items: center;
@@ -52,9 +52,11 @@ body {
   color: #FCF7FF;
 }
 
-.yellow p {
+.yellow a {
   font-weight: 700;
   font-size: 20px;
+  color: #FCF7FF;
+  text-decoration: none;
 }
 
 .orange {
@@ -80,17 +82,18 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #FCF7FF;
-  background: #2823FF;
+  background: #1f3695;
   flex: 1; /* Evenly distribute space among the sub-sections */
-}
-
-.sub-section a {
-  text-decoration: none;
-  color: #FCF7FF;
+  text-decoration: none; /* Ensure no underline on links */
 }
 
 .sub-section:hover {
   opacity: 0.7;
+}
+
+.sub-section a {
+  color: #FCF7FF;
+  text-decoration: none;
 }
 
 /* Hamburger menu styles */
@@ -101,79 +104,77 @@ body {
   padding: 20px;
 }
 
-
 /* Media query for mobile */
 @media (max-width: 1050px) {
 
   .header {
-    flex-direction: row; /* Keep header horizontal */
-    align-items: center;
-    justify-content: space-between;
-    position: relative; /* Make the header the containing block for absolute positioning */
-    margin-top: -80px;
+      flex-direction: row; /* Keep header horizontal */
+      align-items: center;
+      justify-content: space-between;
+      position: relative; /* Make the header the containing block for absolute positioning */
+      margin-top: -80px;
   }
 
   .left-box {
-    height: 100%;
-    display: none;
+      height: 100%;
+      display: none;
   }
 
   .hamburger-menu {
-    display: block;
-    position: absolute; /* Position the hamburger menu */
-    right: 10%;
-    z-index: 1001; /* Ensure it stays on top of other elements */
-    transform: translateX(50%); /* Adjust to truly center the element */
-    
+      display: block;
+      position: absolute; /* Position the hamburger menu */
+      right: 10%;
+      z-index: 1001; /* Ensure it stays on top of other elements */
+      transform: translateX(50%); /* Adjust to truly center the element */
   }
 
   .yellow {
-    position: absolute; /* Position the yellow section absolutely */
-    left: 0; /* Stick it to the left */
-    width: 80%; /* Stretch it to 80% of the header width */
-    height: 100%; /* Ensure it takes the full height of the header */
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start;
-    padding-left: 20px;
-    z-index: 1000; /* Ensure it stays below the hamburger menu */
+      position: absolute; /* Position the yellow section absolutely */
+      left: 0; /* Stick it to the left */
+      width: 80%; /* Stretch it to 80% of the header width */
+      height: 100%; /* Ensure it takes the full height of the header */
+      display: flex;
+      align-items: center; /* Center items vertically */
+      justify-content: flex-start;
+      padding-left: 20px;
+      z-index: 1000; /* Ensure it stays below the hamburger menu */
   }
 
   .orange {
-    flex: 1; /* Keep the orange section as flex: 1 */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center items horizontally */
-    padding-right: 50px; /* Add some padding to prevent overlap with the hamburger menu */
+      flex: 1; /* Keep the orange section as flex: 1 */
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Center items horizontally */
+      padding-right: 50px; /* Add some padding to prevent overlap with the hamburger menu */
   }
 
   .sub-sections {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 80px; /* Position the dropdown below the header */
-    left: 0;
-    background: #2823FF;
-    z-index: 999;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 80px; /* Position the dropdown below the header */
+      left: 0;
+      background: #1f3695;
+      z-index: 999;
   }
 
   .sub-section {
-    width: 100%;
-    text-align: center;
+      width: 100%;
+      text-align: center;
   }
 
   .sub-section:hover {
-    opacity: 1;
-    background: #9886ff;
+      opacity: 1;
+      background: #9886ff;
   }
 
   .sub-section a {
-    display: block;
-    padding: 15px 0;
+      display: block;
+      padding: 15px 0;
   }
 
   .header.active .sub-sections {
-    display: flex;
+      display: flex;
   }
 }

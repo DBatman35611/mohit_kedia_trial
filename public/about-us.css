@@ -164,11 +164,11 @@ body{
   flex-direction: column; /* Stack text and paragraph vertically */
   justify-content: flex-start; /* Align items at the start */
   align-items: center;
-  color: #2823FF;
+  color: #1f3695;
   font-size: 15px;
   font-weight: bold;
   padding: 20px;
-  background-color: #2823FF; /* Set background color to blue */
+  background-color: #1f3695; /* Set background color to blue */
   border-radius: 5px;
   padding-top: 20px; /* Remove padding from top */
   margin-bottom: 60px;

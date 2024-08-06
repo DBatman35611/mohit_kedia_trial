@@ -1,5 +1,5 @@
 .footer {
-  background: #2823FF;
+  background: #1f3695;
   color: #FCF7FF;
   width: 100%;
   display: flex;
@@ -9,7 +9,7 @@
 
 .footer-contact {
   flex: 1; /* Each div takes up equal space */
-  background: #2823FF;
+  background: #1f3695;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 
 .footer-quick-links {
   flex: 1; /* Each div takes up equal space */
-  background: #2823FF;
+  background: #1f3695;
   height: 100%;
   display: flex;
   flex-direction: column;

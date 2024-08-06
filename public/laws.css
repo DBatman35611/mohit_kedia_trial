@@ -7,9 +7,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 5%;
-  padding-bottom: 0px;
-  margin-bottom: 50px;
   font-family: 'Space Grotesk';
+  height: 100vh;
+  align-items: center;
   /* Add margin-bottom to avoid gap under footer */
 }
 
@@ -24,7 +24,8 @@
   justify-content: center;
   text-align: center;
   color: #FCF7FF;
-  background: #2823FF;
+  background: #1f3695;
+  height: 70%;
 }
 
 
@@ -51,7 +52,7 @@
   margin-top: 20px;
   background-color: #FCF7FF;
   color: black;
-  border: 2px solid #2823FF;
+  border: 2px solid #1f3695;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -65,7 +66,7 @@
 }
 
 .read-more-button:active {
-  background-color: #2823FF;
+  background-color: #1f3695;
   color: #FCF7FF;
   border: 2px solid #FCF7FF;
 }

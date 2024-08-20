@@ -71,7 +71,8 @@
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 00px; /* Adjust as needed */
+  margin-bottom: 50px;
 }
 
 .home-blog-btn {

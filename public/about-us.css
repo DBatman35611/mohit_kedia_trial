@@ -5,7 +5,7 @@ body{
 .about-us-title {
   height: 100px;
   width: 100%;
-  background: linear-gradient(to right, #2722F0, #FCF7FF);
+  background: linear-gradient(to right, #039639, #FCF7FF);
   padding: 20px;
   display: flex;
   align-items: center; /* Center content vertically */
@@ -164,11 +164,11 @@ body{
   flex-direction: column; /* Stack text and paragraph vertically */
   justify-content: flex-start; /* Align items at the start */
   align-items: center;
-  color: #1f3695;
+  color: #3f5d4f;
   font-size: 15px;
   font-weight: bold;
   padding: 20px;
-  background-color: #1f3695; /* Set background color to blue */
+  background-color: #3f5d4f; /* Set background color to blue */
   border-radius: 5px;
   padding-top: 20px; /* Remove padding from top */
   margin-bottom: 60px;

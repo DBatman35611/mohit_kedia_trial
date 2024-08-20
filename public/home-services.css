@@ -1,6 +1,6 @@
 /* Styling for the service-title div */
 .service-title {
-  background-color: #1f3695; /* Blue background color */
+  background-color: #708F80; /* Blue background color */
   color: #FCF7FF; /* White text color */
   font-weight: bold; /* Bold font */
   font-size: 24px; /* Large font size */
@@ -11,7 +11,7 @@
 
 /* Styling for the services-preview div */
 .services-preview {
-  background-color: #1f3695; /* Blue background color */
+  background-color: #708F80; /* Blue background color */
   padding: 20px; /* Padding inside the div */
   display: flex; /* Display as flex container */
   justify-content: space-between; /* Space evenly between sliders */
@@ -57,8 +57,10 @@
   color: #FCF7FF; /* Text color */
   font-weight: bold; /* Bold font */
   font-family: 'Space Grotesk';
-  background-color: #1f3695; /* Blue background color */
+  background-color: #3f5d4f; /* Blue background color */
   border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Individual div styling */
@@ -70,14 +72,14 @@
   background-color: #FCF7FF; /* White background color */
   color: #1E1926; /* Text color */
   font-family: 'Space Grotesk';
-  padding-bottom: 20px; /* Padding at the bottom */
+  padding-bottom: 30px; /* Padding at the bottom */
 }
 
 /* Styling for the text and image divs inside service divs */
 .service-text {
   color: #1E1926; /* Text color */
   font-family: 'Space Grotesk';
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 }
 
 .service-image {
@@ -96,15 +98,20 @@
 
 /* Styling for the button */
 .service-button {
-  background-color: #1f3695; /* Blue background color */
+  background-color: #708F80; /* Blue background color */
   color: #FCF7FF; /* Text color */
   border: none; /* No border initially */
   border-radius: 5px; /* Slightly rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   transition: opacity 0.15s, background-color 0.15s, border 0.15s; /* Smooth transition for hover and click effects */
-  padding: 5px 10px; /* Padding to adjust the button size */
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-decoration: none;
   font-family: 'Space Grotesk';
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .service-button:hover {
@@ -113,8 +120,8 @@
 
 .service-button:active {
   background-color: #FCF7FF; /* White background on click */
-  border: 2px solid #1f3695; /* Blue border on click */
-  color: #1f3695; /* Blue text color on click */
+  border: 2px solid #3f5d4f; /* Blue border on click */
+  color: #3f5d4f; /* Blue text color on click */
 }
 
 /* Pseudo-elements for gradient effect */
@@ -130,12 +137,12 @@
 
 .services-preview::before {
   left: 0; /* Position at the left end */
-  background: linear-gradient(to right, #1f3695, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
+  background: linear-gradient(to right, #3f5d4f, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
 }
 
 .services-preview::after {
   right: 0; /* Position at the right end */
-  background: linear-gradient(to left, #1f3695, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
+  background: linear-gradient(to left, #3f5d4f, rgba(255, 255, 255, 0)); /* Gradient from blue to transparent */
 }
 
 @media (max-width: 768px) {

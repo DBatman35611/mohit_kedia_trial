@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="${comment.identity ? 'user.png' : 'public/images/anonymous.png'}">
               <div>
                   <h1>${comment.name}</h1>
-                  <p>${comment.message}</p>
+                  <p style="white-space: pre-wrap;">${comment.message}</p>
                   <div class="engagements"><img src="public/images/like.png" id="like"><img src="public/images/share.png" alt=""></div>
                   <span class="date">${new Date(comment.date).toLocaleString()}</span>
               </div>
@@ -80,4 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   publishBtn.addEventListener("click", addPost);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const userCommentInput = document.querySelector('.usercomment');
+
+    userCommentInput.addEventListener('input', function() {
+        // Reset the height to auto to recalculate the new height
+        this.style.height = 'auto';
+        // Set the height to the scrollHeight, which is the height of the content
+        this.style.height = `${this.scrollHeight}px`;
+    });
 });

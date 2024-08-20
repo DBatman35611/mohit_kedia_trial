@@ -18,7 +18,7 @@
   background: #FCF7FF;
   padding: 20px;
   font-family: 'Space Grotesk';
-  width: 500px;
+  width: 75%;
   box-shadow: 0 0 2px #4e4e4e;
   margin: auto;
 }
@@ -40,10 +40,12 @@
   font-family: sans-serif;
   font-size: 0.9em;
   font-family: 'Space Grotesk';
+  padding-right: 20px;
 }
 
 .text p{
   font-family: 'Space Grotesk';
+  margin-bottom: 20px;
 }
 
 .commentbox {
@@ -54,6 +56,9 @@
 
 .comments{
   font-family: 'Space Grotesk';
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .commentbox > img {
@@ -83,14 +88,19 @@
   padding: 10px;
 }
 
-.commentinput > input {
+.commentinput > textarea {
   border: none;
   padding: 10px;
   padding-left: 0;
   outline: none;
   border-bottom: 2px solid blue;
   margin-bottom: 10px;
+  overflow: hidden;
   width: 95%;
+  resize: none; /* Prevents manual resizing */
+  height: 60px; /* Adjust height as needed */
+  font-family: 'Space Grotesk';
+  font-size: 0.9em;
 }
 
 .buttons {
@@ -168,6 +178,7 @@
   display: none;
   align-items: center;
   margin-bottom: 10px;
+  
 }
 
 .engagements img {

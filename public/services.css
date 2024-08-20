@@ -44,11 +44,14 @@ body {
   justify-content: center;
   text-align: center;
   color: #FCF7FF;
-  background: #1f3695;
+  background: #708F80;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service:hover{
-  background-color: #2823ff;
+  background-color: #3f5d4f;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -86,7 +89,7 @@ body {
 }
 
 .contact-button {
-  background-color: #1f3695;
+  background-color: #3f5d4f;
   color: #FCF7FF;
   border: none;
   padding: 10px 20px;
@@ -96,15 +99,19 @@ body {
   margin-top: 10px;
   border-radius: 5px;
   margin-bottom: 50px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .contact-button:hover {
   opacity: 0.7;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .contact-button:active {
   background-color: #FCF7FF;
-  color: #1f3695;
+  color: #3f5d4f;
 }
 
 @media (max-width: 768px) {

@@ -24,7 +24,7 @@
   justify-content: center;
   text-align: center;
   color: #FCF7FF;
-  background: #1f3695;
+  background: #3f5d4f;
   height: 70%;
 }
 
@@ -52,7 +52,7 @@
   margin-top: 20px;
   background-color: #FCF7FF;
   color: black;
-  border: 2px solid #1f3695;
+  border: 2px solid #3f5d4f;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -66,7 +66,7 @@
 }
 
 .read-more-button:active {
-  background-color: #1f3695;
+  background-color: #3f5d4f;
   color: #FCF7FF;
   border: 2px solid #FCF7FF;
 }

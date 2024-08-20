@@ -44,7 +44,7 @@ body {
 }
 
 .yellow {
-  background-color: #1f3695;
+  background-color: #3f5d4f;
   flex: 1;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #FCF7FF;
-  background: #1f3695;
+  background: #3f5d4f;
   flex: 1; /* Evenly distribute space among the sub-sections */
   text-decoration: none; /* Ensure no underline on links */
 }
@@ -155,7 +155,7 @@ body {
       position: absolute;
       top: 80px; /* Position the dropdown below the header */
       left: 0;
-      background: #1f3695;
+      background: #3f5d4f;
       z-index: 999;
   }
 

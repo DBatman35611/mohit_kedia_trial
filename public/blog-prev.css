@@ -65,7 +65,7 @@
 }
 
 .blog-item-content h3 a:hover {
-  color: #1f3695; /* Change color on hover */
+  color: #3f5d4f; /* Change color on hover */
 }
 
 .button-container {
@@ -77,7 +77,7 @@
 .home-blog-btn {
   width: 250px;
   height: 50px;
-  background-color: #1f3695;
+  background-color: #3f5d4f;
   color: #FCF7FF;
   border: none;
   border-radius: 5px;
@@ -99,8 +99,8 @@
 
 .home-blog-btn:active {
   background-color: #FCF7FF;
-  border: 2px solid #1f3695;
-  color: #1f3695;
+  border: 2px solid #3f5d4f;
+  color: #3f5d4f;
 }
 
 

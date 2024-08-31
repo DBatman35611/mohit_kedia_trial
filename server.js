@@ -4,8 +4,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
+const nodemailer = require('nodemailer'); // Import Nodemailer
 const app = express();
-const port = process.env.PORT || 3001; // Adjust the port number as needed
+const port = process.env.PORT || 3001;
 
 // Replace this with your MongoDB connection string
 const dbURI = process.env.MONGO_URL || 'mongodb+srv://mohitkediawebtrial:mohitkediawebtrial@cluster0.1ojfc5h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
@@ -58,6 +59,35 @@ app.post('/comments', async (req, res) => {
     }
 });
 
+// Handle the contact form submission
+app.post('/send-email', (req, res) => {
+    const { userEmail, subject, messageContent } = req.body;
+
+    const transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PASSWORD,
+        },
+    });
+
+    const mailOptions = {
+        from: process.env.EMAIL, // Sent from your email
+        to: 'ekatva.jain@gmail.com',
+        subject: subject, // Subject provided by the user
+        text: `From: ${userEmail}\n\n${messageContent}`, // Plain text content with user's email included
+        html: `<p><strong>From:</strong> ${userEmail}</p><p>${messageContent.replace(/\n/g, '<br>')}</p>`, // HTML version with user's email
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error sending email:', error);
+            return res.status(500).send('Error sending email.');
+        }
+        console.log('Email sent:', info.response);
+        res.send('Message sent successfully!');
+    });
+});
 // Catch all other routes and serve the about.html file
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'about.html'));

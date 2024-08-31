@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="public/styles.css">
+  <link rel="stylesheet" href="public/header.css">
+  <link rel="stylesheet" href="public/about-us.css">
+  <link rel="stylesheet" href="public/footer.css">
+  <link rel="stylesheet" href="public/comment.css">
+  <link rel="stylesheet" href="public/home-services.css">
+  <link rel="stylesheet" href="public/blog-prev.css">
+  <link rel="stylesheet" href="public/contact-us.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <meta name="description" content="Looking for a trusted Chartered Accountant near you in Whitefield, Bangalore? Mohit Kedia & Associates offers expert CA services for businesses and individuals.">
+
+
+</head>
+<body>
+  <div class="header">
+    <div class="left-box">
+        <img src="CA_logo_2.png" alt="Company Logo">
+    </div>
+    <div class="section yellow">
+        <a href="index.html">Mohit Kedia & Associates</a>
+    </div>
+    <div class="section orange">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="sub-sections">
+            <a class="sub-section home" href="index.html">Home</a>
+            <a class="sub-section About" href="about.html">About us</a>
+            <a class="sub-section Services" href="services.html">Services</a>
+            <a class="sub-section Blog" href="https://medium.com/@camohitkedia" target="_blank">Blog</a>
+            <a class="sub-section Laws" href="laws.html">Legal</a>
+            <a class="sub-section Contact" href="#footer">Contact us</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="about-us-title">
+    <p>Contact Us</p>
+  </div>
+
+<div class="contact-us-content">
+    <form id="contact-form" class="contact-form">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+      
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<div class="google-map">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5787129797304!2d77.60920317537068!3d12.93477658737722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae144d859731bb%3A0x7be523c4ee2a1b09!2sNexus%20Mall%20Koramangala!5e0!3m2!1sen!2sin!4v1724849831010!5m2!1sen!2sin" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+  <div id="footer" class="footer">
+    <div class="footer-quick-links">
+        <div class="footer-links-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="laws.html">Rules & Reg</a>
+          <a href="index.html#comment-section">Testimonials</a>
+        </div>
+    </div>
+    <div class="divider"></div> <!-- Divider -->
+    <div class="footer-contact">
+        <div class="footer-contact-title">Contact</div>
+        <div class="footer-contact-info">
+          <p>Email: camohitkedia@gmail.com</p>
+          <p>Phone: +919874820170</p>
+          <p>Address: Shilpitha Sunflower Apartment,
+            Borewell Road, Whitefield, Bangalore</p>
+        </div>
+    </div>
+  </div>
+
+  <script src="public/script.js"></script> 
+  <script src="public/contact.js"></script>
+</body>
+</html>

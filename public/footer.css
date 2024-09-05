@@ -73,3 +73,17 @@
   width: 2px; /* Thickness of the divider */
   background-color: #FCF7FF; /* Color of the divider */
 }
+
+@media (max-width: 450px) {
+  .divider{
+    display: none;
+  } 
+
+  .footer{
+    flex-direction: column;
+  }
+
+  .footer-contact{
+    text-align: center;
+  }
+}

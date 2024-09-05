@@ -202,3 +202,12 @@
     width: 300px;
   }
 }
+
+@media (max-width: 875px) {
+ 
+  .comments{
+    
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}

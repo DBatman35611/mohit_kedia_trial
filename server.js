@@ -73,7 +73,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: process.env.EMAIL, // Sent from your email
-        to: 'camohitkedia@gmail.com',
+        to: 'ekatva.jain@gmail.com',
         subject: subject, // Subject provided by the user
         text: `From: ${userEmail}\n\n${messageContent}`, // Plain text content with user's email included
         html: `<p><strong>From:</strong> ${userEmail}</p><p>${messageContent.replace(/\n/g, '<br>')}</p>`, // HTML version with user's email

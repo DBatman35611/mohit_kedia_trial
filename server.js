@@ -26,7 +26,7 @@ const Comment = mongoose.model('Comment', commentSchema);
 app.use(bodyParser.json());
 
 // Serve static files (CSS, JS, images) from the root 'Website' directory
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
 app.get('/', (req, res) => {

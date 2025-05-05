@@ -109,6 +109,17 @@
   
 }
 
+
+.update-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+}
+
+
 .update-title{
   justify-self: center;
   align-self: center;

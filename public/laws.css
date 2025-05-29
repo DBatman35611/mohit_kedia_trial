@@ -44,6 +44,7 @@
   background-color: #FCF7FF;
   position: relative;
   margin-bottom: 20px;
+  
 }
 
 .law-icon img {
@@ -82,7 +83,72 @@
 
 
 @media (max-width: 1200px) {
+
   .legal-grid {
     grid-template-columns: repeat(1, 1fr);
+    height: 170vh;
+
+    justify-content: center;
+    gap: 0;
   }
+
+  .law-icon{
+    width: 15%;
+    padding-top: 15%;
+    
+  }
+
 }
+
+@media (max-width: 500px) {
+  .law-icon{
+    width: 30%;
+    padding-top: 30%;
+    
+  }
+  
+}
+
+
+.update-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+}
+
+
+.update-title{
+  justify-self: center;
+  align-self: center;
+  font-size: 1.7rem;
+}
+
+.update-content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #FCF7FF;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.update-content li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.highlight{
+  font-weight: 500;
+  
+}
+

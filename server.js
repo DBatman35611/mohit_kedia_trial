@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer'); // Import Nodemailer
+const fs = require('fs-extra');
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -88,6 +89,50 @@ app.post('/send-email', (req, res) => {
         res.send('Message sent successfully!');
     });
 });
+
+// Blog-related endpoints
+app.get('/api/blog-posts', async (req, res) => {
+    try {
+        const blogDir = path.join(__dirname, 'blog', 'html');
+        const files = await fs.readdir(blogDir);
+        const posts = [];
+
+        for (const file of files) {
+            if (file.endsWith('.html')) {
+                const stats = await fs.stat(path.join(blogDir, file));
+                posts.push({
+                    filename: file,
+                    title: file.replace('.html', '').replace(/-/g, ' '),
+                    date: stats.mtime
+                });
+            }
+        }
+
+        // Sort posts by date, newest first
+        posts.sort((a, b) => b.date - a.date);
+        res.json(posts);
+    } catch (error) {
+        console.error('Error getting blog posts:', error);
+        res.status(500).json({ message: 'Error getting blog posts' });
+    }
+});
+
+// Serve blog HTML files
+app.get('/blog/html/:filename', (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(__dirname, 'blog', 'html', filename);
+    
+    // Check if file exists
+    if (fs.existsSync(filePath)) {
+        res.sendFile(filePath);
+    } else {
+        res.status(404).send('Blog post not found');
+    }
+});
+
+// Start the blog processor
+require('./blogProcessor');
+
 // Catch all other routes and serve the about.html file
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'about.html'));

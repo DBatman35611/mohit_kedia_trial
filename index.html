@@ -63,7 +63,7 @@
                 <a class="sub-section home" href="index.html">Home</a>
                 <a class="sub-section About" href="about.html">About us</a>
                 <a class="sub-section Services" href="services.html">Services</a>
-                <a class="sub-section Blog" href="https://medium.com/@camohitkedia" target="_blank">Blog</a>
+                <a class="sub-section Blog" href="blog.html">Blog</a>
                 <a class="sub-section Laws" href="laws.html">Legal</a>
                 <a class="sub-section Contact" href="contact.html">Contact us</a>
             </div>
@@ -182,41 +182,54 @@
       <p>Blog</p>
     </div>
     
-    <!--
     <div class="blog-preview">
-      <div class="blog-item blue-bg">
-          <a href="https://medium.com/illumination/personal-finance-what-it-is-and-why-it-matters-f7988137622b" target="_blank">
-              <img src="finance_3.webp" alt="Finance Image 1">
-              <div class="blog-item-content">
-                  <h3>Blog Item 1</h3>
-              </div>
-          </a>
-      </div>
-      <div class="blog-item blue-bg">
-          <a href="https://medium.com/illumination/personal-finance-what-it-is-and-why-it-matters-f7988137622b" target="_blank">
-              <img src="finance_2.webp" alt="Finance Image 2">
-              <div class="blog-item-content">
-                  <h3>Blog Item 2</h3>
-              </div>
-          </a>
-      </div>
-      <div class="blog-item blue-bg">
-          <a href="https://medium.com/illumination/personal-finance-what-it-is-and-why-it-matters-f7988137622b" target="_blank">
-              <img src="finance_3.webp" alt="Finance Image 3">
-              <div class="blog-item-content">
-                  <h3>Blog Item 3</h3>
-              </div>
-          </a>
+      <div id="recent-posts" class="blog-list">
+        <!-- Recent blog posts will be loaded here -->
       </div>
     </div>
-
-    -->
 
     <div class="button-container">
-      <a href="https://medium.com/" target="_blank" class="home-blog-btn">View</a>
+      <a href="blog.html" class="home-blog-btn">View All Posts</a>
     </div>
 
-  
+    <script>
+        // Function to fetch and display recent blog posts
+        async function loadRecentPosts() {
+            try {
+                const response = await fetch('/api/blog-posts');
+                const posts = await response.json();
+                const blogList = document.getElementById('recent-posts');
+                
+                if (posts.length === 0) {
+                    blogList.innerHTML = '<p class="no-posts">No blog posts available yet.</p>';
+                    return;
+                }
+
+                // Get only the 3 most recent posts
+                const recentPosts = posts.slice(0, 3);
+                const postsHtml = recentPosts.map(post => `
+                    <div class="blog-item blue-bg">
+                        <a href="/blog/html/${post.filename}">
+                            <div class="blog-item-content">
+                                <h3>${post.title}</h3>
+                                <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
+                            </div>
+                        </a>
+                    </div>
+                `).join('');
+
+                blogList.innerHTML = postsHtml;
+            } catch (error) {
+                console.error('Error loading recent posts:', error);
+                document.getElementById('recent-posts').innerHTML = 
+                    '<p class="error">Error loading blog posts. Please try again later.</p>';
+            }
+        }
+
+        // Load recent posts when the page loads
+        document.addEventListener('DOMContentLoaded', loadRecentPosts);
+    </script>
+
     <div id="comment-section" class="comment-section">
       <div class="container">
         <div class="head"><h2>Our Strength, Our Clients</h2></div>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mohit Kedia and Associates</title>
+    <link rel="stylesheet" href="public/styles.css">
+    <link rel="stylesheet" href="public/header.css">
+    <link rel="stylesheet" href="public/footer.css">
+    <link rel="stylesheet" href="public/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="header">
+            <div class="left-box">
+                <img src="CA_logo_2.png" alt="Company Logo">
+            </div>
+            <div class="section yellow">
+                <a href="index.html">Mohit Kedia & Associates</a>
+            </div>
+            <div class="section orange">
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <div class="sub-sections">
+                    <a class="sub-section home" href="index.html">Home</a>
+                    <a class="sub-section About" href="about.html">About us</a>
+                    <a class="sub-section Services" href="services.html">Services</a>
+                    <a class="sub-section Blog" href="blog.html">Blog</a>
+                    <a class="sub-section Laws" href="laws.html">Legal</a>
+                    <a class="sub-section Contact" href="contact.html">Contact us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="green-banner">
+            <p>Blog</p>
+        </div>
+
+        <div class="blog-list-container">
+            <h1>Blog Posts</h1>
+            <div id="blog-list" class="blog-list">
+                <!-- Blog posts will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <div class="footer-quick-links">
+            <div class="footer-links-title">Quick Links</div>
+            <div class="footer-links">
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="laws.html">Rules & Reg</a>
+            </div>
+        </div>
+    </div>
+    <script src="public/header.js"></script>
+    <script src="public/script.js"></script>
+    <script>
+        // Function to fetch and display blog posts
+        async function loadBlogPosts() {
+            try {
+                const response = await fetch('/api/blog-posts');
+                const posts = await response.json();
+                const blogList = document.getElementById('blog-list');
+                
+                if (posts.length === 0) {
+                    blogList.innerHTML = '<p class="no-posts">No blog posts available yet.</p>';
+                    return;
+                }
+
+                const postsHtml = posts.map(post => `
+                    <div class="blog-post-item">
+                        <a href="/blog/html/${post.filename}">
+                            <h2>${post.title}</h2>
+                            <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
+                        </a>
+                    </div>
+                `).join('');
+
+                blogList.innerHTML = postsHtml;
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                document.getElementById('blog-list').innerHTML = 
+                    '<p class="error">Error loading blog posts. Please try again later.</p>';
+            }
+        }
+
+        // Load blog posts when the page loads
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
+    </script>
+</body>
+</html> 

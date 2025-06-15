@@ -109,7 +109,6 @@
   
 }
 
-
 .update-section{
   display: flex;
   justify-content: center;
@@ -119,10 +118,8 @@
   flex-direction: column;
 }
 
-
 .update-title{
   justify-self: center;
-  align-self: center;
   font-size: 1.7rem;
 }
 
